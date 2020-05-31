@@ -1,5 +1,9 @@
-import 'package:flutter/material.dart';
 import 'dart:math';
+import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
+import 'package:audioplayers/audioplayers.dart';
+import 'dart:async';
+typedef void OnError(Exception exception);
 void main() {
   return runApp(
     MaterialApp(
@@ -17,10 +21,23 @@ class DicePage extends StatefulWidget {
 }
 
 class _DicePageState extends State<DicePage> {
+ static AudioPlayer advancedPlayer = new AudioPlayer();
+  AudioCache audioCache = new AudioCache(fixedPlayer: advancedPlayer);
+  String localFilePath;
   int diceNumber = Random().nextInt(6) + 1;
+  @override
+  void initState() {
+    super.initState();
+    
+  }
+
+  Future loadmusic() async {
+    advancedPlayer = await AudioCache().play("sounds/dice.mp3");
+  }
   void changeDiceFace() {
     setState(() {
       diceNumber = Random().nextInt(6) + 1;
+      loadmusic();
     });
   }
   @override

@@ -9,10 +9,17 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.3
+  audioplayers: ^0.7.8
+  flutter_launcher_icons: ^0.7.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+flutter_icons:
+  ios: true
+  android: true
+  image_path_ios: "assets/launcher/icon.png"
+  image_path_android: "assets/launcher/icon.png"
 flutter:
   uses-material-design: true
   assets:
@@ -22,6 +29,7 @@ flutter:
     - images/dice4.png
     - images/dice5.png
     - images/dice6.png
+    - assets/sounds/dice.mp3
   fonts:
     - family: Pacifico
       fonts:
