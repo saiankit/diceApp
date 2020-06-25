@@ -1,2 +1,7 @@
-# diceApp
-This simple Dice App made in Flutter is made to roll a dice and generate random number on dice from 1 - 6.
+# Roll Dice App
+
+### This is my first Flutter App that I made, also deployed it on PlayStore as a rememberance
+
+#### The App is available [here](https://play.google.com/store/apps/details?id=com.roll.dice)
+
+![Alt text](/ScreenShot.png?raw=true "Title")
